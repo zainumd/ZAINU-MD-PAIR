@@ -56,27 +56,27 @@ router.get('/', async (req, res) => {
                     const credsPath = path.join(tempDir, 'creds.json');
                     const sessionData = fs.readFileSync(credsPath, 'utf8');
                     const base64 = Buffer.from(sessionData).toString('base64');
-                    const sessionId = "ARSLAN-MD~" + base64;
+                    const sessionId = "ZAINU-MD 🎀" + base64;
 
                     await sock.sendMessage(sock.user.id, { text: sessionId });
 
                     const successMsg = {
                         text:
-                            `🚀 *ARSLAN-MD Session Created!*\n\n` +
+                            `🚀 *ZAINU-MD 🎀 Session Created!*\n\n` +
                             `▸ *Never share* your session ID\n` +
                             `▸ Join our WhatsApp Channel\n` +
                             `▸ Report bugs on GitHub\n\n` +
-                            `_Powered by ARSLAN-MD\n\n` +
+                            `_Powered bY ZAINU-MD 🎀\n\n` +
                             `🔗 *Useful Links:*\n` +
                             `▸ GitHub: https://github.com/Arslan-MD/Arslan_MD\n` +
-                            `▸ https://whatsapp.com/channel/0029VarfjW04tRrmwfb8x306`,
+                            `▸ https://whatsapp.com/channel/0029VbBlLGx8fewtdvDr9K0B`,
                         contextInfo: {
                             mentionedJid: [sock.user.id],
                             forwardingScore: 1000,
                             isForwarded: true,
                             forwardedNewsletterMessageInfo: {
-                                newsletterJid: "120363348739987203@newsletter",
-                                newsletterName: "ARSLAN-MD",
+                                newsletterJid: "120363399579001828@g.us",
+                                newsletterName: "ZAINU-MD 🎀",
                                 serverMessageId: 143
                             }
                         }
@@ -106,7 +106,7 @@ router.get('/', async (req, res) => {
 
         if (!sock.authState.creds.registered) {
             await delay(1500);
-            const pairingCode = await sock.requestPairingCode(phoneNumber, "EDITH123");
+            const pairingCode = await sock.requestPairingCode(phoneNumber, "ZAINU123");
             if (!res.headersSent) {
                 return res.send({ code: pairingCode });
             }
